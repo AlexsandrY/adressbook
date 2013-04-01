@@ -14,6 +14,9 @@
     <cx.version>3.0-SNAPSHOT</cx.version>
     <cx.port>8180</cx.port>
     <cx.router>pro.adressbook.savant.Main</cx.router>
+    <orm.connection.username>sa</orm.connection.username>
+    <orm.connection.password/>
+    <orm.connection.url>jdbc:h2:test</orm.connection.url>
   </properties>
 
   <dependencies>
