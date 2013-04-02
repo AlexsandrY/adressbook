@@ -31,15 +31,20 @@
       <version>${cx.version}</version>
     </dependency>
     <dependency>
+      <groupId>javax.servlet</groupId>
+      <artifactId>servlet-api</artifactId>
+      <version>2.5</version>
+      <scope>provided</scope>
+    </dependency>
+    <dependency>
       <groupId>pro.savant.circumflex</groupId>
       <artifactId>circumflex-ftl</artifactId>
       <version>${cx.version}</version>
     </dependency>
     <dependency>
-      <groupId>javax.servlet</groupId>
-      <artifactId>servlet-api</artifactId>
-      <version>2.5</version>
-      <scope>provided</scope>
+      <groupId>pro.savant.circumflex</groupId>
+      <artifactId>circumflex-orm</artifactId>
+      <version>${cx.version}</version>
     </dependency>
     <!-- Logging -->
     <dependency>
@@ -112,6 +117,11 @@
         <groupId>pro.savant.circumflex</groupId>
         <artifactId>maven-cx-plugin</artifactId>
         <version>${cx.version}</version>
+        <configuration>
+          <packages>
+            <package>org.test</package>
+          </packages>
+        </configuration>
         <executions>
           <execution>
             <id>configure</id>
