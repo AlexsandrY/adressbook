@@ -1,8 +1,18 @@
 [#ftl]
 
 [#assign content]
-<h1>Welcome to Simple Circumflex Web Application!</h1>
+<h2>Welcome to Simple Circumflex Web Application!</h2>
 <p>Please take a moment to observe your project layout.</p>
+
+<div class="centered margin-top">
+  <a href="/create"
+     title="${msg['adr.create']}"
+     class="btn primary inverse">${msg['adr.create']}
+  </a>
+
+</div>
+
+
 <ul>
   <li><strong>pom.xml</strong>
     &mdash; Maven2 Project Object Model, an XML file that contains
@@ -56,4 +66,4 @@
   We hope you'll get a lot of fun developing with Circumflex! Good luck!</p>
 [/#assign]
 
-[#include "/layout.ftl"/]
+[#include "layout.ftl"/]

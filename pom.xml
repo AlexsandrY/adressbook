@@ -13,7 +13,7 @@
   <properties>
     <cx.version>3.0-SNAPSHOT</cx.version>
     <cx.port>8180</cx.port>
-    <cx.router>pro.adressbook.savant.Main</cx.router>
+    <cx.router>org.adressbook.Main</cx.router>
     <orm.connection.username>sa</orm.connection.username>
     <orm.connection.password/>
     <orm.connection.url>jdbc:h2:test</orm.connection.url>
@@ -119,7 +119,7 @@
         <version>${cx.version}</version>
         <configuration>
           <packages>
-            <package>org.test</package>
+            <package>org.adressbook</package>
           </packages>
         </configuration>
         <executions>
