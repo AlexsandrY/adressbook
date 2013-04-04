@@ -1,69 +1,61 @@
 [#ftl]
 
 [#assign content]
-<h2>Welcome to Simple Circumflex Web Application!</h2>
-<p>Please take a moment to observe your project layout.</p>
+<h2>Адресная книга!!!</h2>
+<p>Добавьте новый контакт.</p>
 
-<div class="centered margin-top">
+<div>
   <a href="/create"
      title="${msg['adr.create']}"
      class="btn primary inverse">${msg['adr.create']}
   </a>
 
+  <a href="/view"
+     title="${msg['adr.view']}"
+     class="btn primary">${msg['adr.view']}
+  </a>
+
+  <a href="/editing"
+     title="${msg['adr.editing']}"
+     class="btn primary">${msg['adr.editing']}
+  </a>
+
+  <a href="/remove"
+     title="${msg['adr.remove']}"
+     class="btn important inverse">${msg['adr.remove']}
+  </a>
 </div>
 
 
 <ul>
-  <li><strong>pom.xml</strong>
-    &mdash; Maven2 Project Object Model, an XML file that contains
-    information about the project and configuration details used by Maven to build the project.
-    It contains sensible default values for most projects. Basically you configure your
-    project's dependencies, build names, source and target directories and build plugins using
-    this configuration file. For more information, proceed to
-    <a href="http://maven.apache.org/guides/introduction/introduction-to-the-pom.html"
+  <li><strong>Адресная книга</strong>
+    &mdash; это веб-приложение представляет собой адресную книгу. В адресной книге вы храните ваших
+    близких и знакомых людей, их контакты, адреса, дни рождения. Каждый человек имеет такие свойства как имя,
+    фамилия, номер телефона или адрес электронной почты.
+
+    <a href="http://org.adressbook/"
        target="_blank">
-      Introduction to the POM</a>.
+      Адресная книга.</a>.
   </li>
-  <li><strong>src/main</strong>
-    &mdash; main source directory of your project:
+  <li><strong>Ниже представлены основные функции для работы с адресной книгой:</strong>
     <ul>
-      <li><strong>scala/main.scala</strong>
-        &mdash; your application's entry point called <em>Request Router</em>, it handles all incoming
-        HTTP requests, matching them against <em>routes</em>: the first route that matches request
-        is executed;</li>
-      <li><strong>webapp</strong>
-        &mdash; your Web application context root:
-        <ul>
-          <li><strong>WEB-INF/web.xml</strong>
-            &mdash; the Java EE <em>deployment descriptor</em>,
-            an XML configuration file that specifies, how your application will be deployed into
-            <em>Servlet Container</em>.
-            By default it just maps all URLs to <em>Circumflex Filter</em>.</li>
-          <li><strong>public</strong>
-            &mdash; a directory for static resources, e.g. stylesheets,
-            scripts, images, etc.; resources under this directory are served directly by the
-            container and are not processed by <em>Circumflex Filter</em>.</li>
-          <li><strong>templates</strong>
-            &mdash; a default location for FreeMarker templates; they are resolved relatively to this
-            location by <em>Circumflex FreeMarker helper</em>.</li>
-        </ul>
+      <li><strong>Добавить</strong>
+        &mdash; Просмотреть</li>
+      <li><strong>Редактировать</strong>
+        &mdash;Удалить
+
       </li>
-      <li><strong>resources/Messages.properties</strong>
-        &mdash; various messages for your application can be defined there for
-        <a href="http://java.sun.com/docs/books/tutorial/i18n/index.html"
-           target="_blank">Internationalization</a> purposes;</li>
-      <li><strong>resources/cx.properties</strong>
-        &mdash; Circumflex configuration parameters are specified here, by default it only contains the
-        <em>cx.router</em> parameter, which points to your application Request Router class;</li>
+      <li><strong>Удалить</strong>
+        &mdash; ну вы понимаете, что впринцепи тут так же...</li>
+      <li><strong>Изменить</strong>
+        &mdash; и да, над этим мы тоже работаем...</li>
     </ul>
   </li>
-  <li><strong>src/test/scala</strong> &mdash; your tests source directory. It contains a simple
-    spec out-of-box. You are free to add more sophisticated tests for your application.</li>
+
 </ul>
-<p>Please visit <a href="http://circumflex.ru" target="_blank">Circumflex website</a> for
-   further information.</p>
-<p style="font-weight:bold">
-  We hope you'll get a lot of fun developing with Circumflex! Good luck!</p>
+
+<p style="font-weight:bold">Бла бла бла!!!</p>
+
 [/#assign]
 
 [#include "layout.ftl"/]

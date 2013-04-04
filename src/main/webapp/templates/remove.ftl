@@ -2,7 +2,7 @@
 
 
 [#assign content]
-  Создано!!!
+ Удалено!!!
 [/#assign]
 
 [#include "layout.ftl"/]

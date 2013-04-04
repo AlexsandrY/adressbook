@@ -2,7 +2,8 @@
 
 
 [#assign content]
-  Создано!!!
+Модифицировано!!!
+
 [/#assign]
 
 [#include "layout.ftl"/]
