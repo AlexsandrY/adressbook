@@ -10,10 +10,14 @@ class Main extends Router {
 
   get("/test") = "I'm fine, thanks!"
   get("/") = ftl("index.ftl")
-  get("/create") = ftl("create.ftl")
+  get("/create") = {
+    'contact := Contact.all
+    ftl("create.ftl")
+  }
   get("/view") = ftl("view.ftl")
   get("/editing") = ftl("editing.ftl")
   get("/remove") = ftl("remove.ftl")
+
 
 
 }

@@ -2,7 +2,7 @@ package org.adressbook
 
 import pro.savant.circumflex._, orm._
 import java.util.Date
-import org.eclipse.jetty.server.Authentication.User
+
 
 class Contact
     extends Record[Long, Contact]
@@ -18,7 +18,7 @@ class Contact
   val post = "post".HTML.NOT_NULL("")
   val company = "company".HTML.NOT_NULL("")
   val address = "address".HTML.NOT_NULL("")
-  val dateofBirth = "dateofBirth".DATE(new Date)
+  val dateofBirth = "dateofBirth".TIMESTAMP.NOT_NULL(new Date)
 }
 
 object Contact extends Contact with Table[Long, Contact] {
@@ -34,9 +34,8 @@ class Phone
     extends Record[Long, Phone]
     with IdentityGenerator[Long, Phone] {
 
-  def PRIMARY_KEY: ValueHolder[Long, Phone] = ???
-
-  def relation: Relation[Long, Phone] = ???
+  def PRIMARY_KEY = id
+  def relation = Phone
 
   val id = "id".BIGINT.NOT_NULL.AUTO_INCREMENT
   val phoneType = "phoneType".HTML.NOT_NULL
@@ -47,10 +46,33 @@ object Phone extends Phone with Table[Long, Phone] {
 
 
   validation
-      .notEmpty(_.)
-
-
+      .notEmpty(_.phoneType)
+      .notEmpty(_.telephoneNumber)
 }
+
+class Email
+    extends Record[Long, Email]
+    with IdentityGenerator[Long, Email] {
+
+  def PRIMARY_KEY = id
+  def relation = Email
+
+  val id = "id".BIGINT.NOT_NULL.AUTO_INCREMENT
+  val emailType = "emailType".HTML.NOT_NULL
+  val email = "email".HTML.NOT_NULL("")
+}
+
+object Email extends Email with Table[Long, Email]{
+
+
+  validation
+       .unique(_.email)
+       .notEmpty(_.email)
+       .notEmpty(_.emailType)
+}
+
+
+
 
 
 
