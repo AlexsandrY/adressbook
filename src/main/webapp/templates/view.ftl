@@ -2,8 +2,33 @@
 
 
 [#assign content]
- Просмотрено!!!
+<h1>Просмотр cписка контактов</h1>
 
+<p>${contact.firstName!}</p>
+<p>${contact.secondName!}</p>
+<p>${contact.surName!}</p>
+<p>${contact.post!}</p>
+<p>${contact.company!}</p>
+<p>${contact.address!}</p>
+<p>${contact.dateofBirth!}</p>
+<div class="left-float">
+  <a href="/${contact.id}/~delete"
+     class="btn important inverse"
+     title="${msg['adr.remove']}">${msg["adr.remove"]}
+  </a>
+</div>
+<div class="left-float">
+  <a href="/${contact}/~edit"
+     class="btn primary inverse"
+     title="${msg['adr.editing']}">${msg["adr.editing"]}
+  </a>
+</div>
+<br/>
+<div class="centered margin-top">
+  <a href="/list"
+     title="${msg['adr.list-addressbook']}">${msg['adr.list-addressbook']}
+  </a>
+</div>
 [/#assign]
 
 [#include "layout.ftl"/]

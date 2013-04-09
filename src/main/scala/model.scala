@@ -18,7 +18,7 @@ class Contact
   val post = "post".HTML.NOT_NULL("")
   val company = "company".HTML.NOT_NULL("")
   val address = "address".HTML.NOT_NULL("")
-  val dateofBirth = "dateofBirth".TIMESTAMP.NOT_NULL(new Date)
+  val dateofBirth = "dateofBirth".HTML.NOT_NULL("")
 }
 
 object Contact extends Contact with Table[Long, Contact] {
@@ -28,6 +28,8 @@ object Contact extends Contact with Table[Long, Contact] {
       .notEmpty(_.firstName)
       .notEmpty(_.secondName)
       .notEmpty(_.surName)
+
+
 }
 
 class Phone

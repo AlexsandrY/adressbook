@@ -2,17 +2,17 @@
 
 
 [#assign content]
-<h1>${msg["adr.delete"]}</h1>
-<form action="/${recipe.id}"
+<h1>${msg["adr.remove"]}</h1>
+<form action="/${contact.id}"
       method="post"
       class="submission">
   <input type="hidden" name="_method" value="delete"/>
   <div class="submits margin-top centered">
     <input type="submit"
            class="btn important inverse"
-           value="${msg['rec.delete']}"/>
-    <span>${msg['or']}</span>
-    <a href="/${recipe.id}">${msg['cancel']}</a>
+           value="${msg['adr.remove']}"/>
+    <span>${msg['adr.or']}</span>
+    <a href="/${contact.id}">${msg['adr.cancel']}</a>
   </div>
 </form>
 
