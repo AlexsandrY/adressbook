@@ -31,7 +31,13 @@
   <li><strong>Ниже представлены основные функции для работы с адресной книгой:</strong>
 
   </li>
-
+   <h1>Типочки</h1>
+    [#list contact as c]
+        <a href="/${c.id}"
+           class="pill primary"
+           title="${c.firstName}">${c.firstName}
+        </a>
+    [/#list]
 </ul>
 
 <p style="font-weight:bold">Бла бла бла!!!</p>

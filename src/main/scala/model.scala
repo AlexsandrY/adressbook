@@ -12,13 +12,13 @@ class Contact
   def relation: Relation[Long, Contact] = Contact
 
   val id = "id".BIGINT.NOT_NULL.AUTO_INCREMENT
-  val firstName = "firstName".HTML.NOT_NULL
-  val secondName = "secondName".HTML.NOT_NULL
-  val surName = "surName".HTML.NOT_NULL
+  val firstName = "first_name".HTML.NOT_NULL
+  val secondName = "second_name".HTML.NOT_NULL
+  val surName = "sur_name".HTML.NOT_NULL
   val post = "post".HTML.NOT_NULL("")
   val company = "company".HTML.NOT_NULL("")
   val address = "address".HTML.NOT_NULL("")
-  val dateofBirth = "dateofBirth".HTML.NOT_NULL("")
+  val dateofBirth = "date_of_birth".HTML.NOT_NULL("")
 }
 
 object Contact extends Contact with Table[Long, Contact] {

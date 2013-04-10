@@ -9,7 +9,11 @@ class Main extends Router {
 
   'currentDate := new Date
 
-  get("/") = ftl("index.ftl")
+
+  get("/") = {
+    'contact := Contact.all
+    ftl("index.ftl")
+  }
 
   get("/create") = ftl("create.ftl")
 
@@ -18,7 +22,7 @@ class Main extends Router {
       val c = new Contact
       c.firstName:= param("n").trim
       c.secondName:= param("ns").trim
-      c.surName:= param("sur").trim
+      c.surName:= param("sun").trim
       c.post:= param("p").trim
       c.company:= param("c").trim
       c.address:= param("a").trim
@@ -32,10 +36,6 @@ class Main extends Router {
     }
   }
 
-  get("/list") = {
-    'contact := Contact.all
-    ftl("/list.ftl")
-  }
 
   sub("/:id") = {
 

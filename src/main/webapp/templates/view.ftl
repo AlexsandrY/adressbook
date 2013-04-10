@@ -25,7 +25,7 @@
 </div>
 <br/>
 <div class="centered margin-top">
-  <a href="/list"
+  <a href="/"
      title="${msg['adr.list-addressbook']}">${msg['adr.list-addressbook']}
   </a>
 </div>
