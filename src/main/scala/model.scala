@@ -29,6 +29,7 @@ object Contact extends Contact with Table[Long, Contact] {
       .notEmpty(_.secondName)
       .notEmpty(_.surName)
 
+  private val c = Contact AS "c"
 
 }
 

@@ -12,13 +12,13 @@
 <p>${contact.address!}</p>
 <p>${contact.dateofBirth!}</p>
 <div class="left-float">
-  <a href="/${contact.id}/~delete"
+  <a href="/${contact.id}/~remove"
      class="btn important inverse"
      title="${msg['adr.remove']}">${msg["adr.remove"]}
   </a>
 </div>
 <div class="left-float">
-  <a href="/${contact}/~edit"
+  <a href="/${contact}/~editing"
      class="btn primary inverse"
      title="${msg['adr.editing']}">${msg["adr.editing"]}
   </a>

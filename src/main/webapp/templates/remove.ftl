@@ -6,7 +6,7 @@
 <form action="/${contact.id}"
       method="post"
       class="submission">
-  <input type="hidden" name="_method" value="delete"/>
+  <input type="hidden" name="_method" value="remove"/>
   <div class="submits margin-top centered">
     <input type="submit"
            class="btn important inverse"
