@@ -9,6 +9,8 @@
         type="image/x-icon">
   <!-- Bootstrap -->
   <link href="/css/bootstrap.min.css" rel="stylesheet">
+  <script src="http://code.jquery.com/jquery-latest.js"></script>
+  <script src="js/bootstrap.min.js"></script>
   <title>Simple Circumflex Application</title>
 </head>
 <body>

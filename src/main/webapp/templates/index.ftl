@@ -9,12 +9,6 @@
      title="${msg['adr.create']}"
      class="btn primary inverse">${msg['adr.create']}
   </a>
-
-  <a href="/view"
-     title="${msg['adr.view']}"
-     class="btn primary">${msg['adr.view']}
-  </a>
-
 </div>
 
 
@@ -31,7 +25,7 @@
   <li><strong>Ниже представлены основные функции для работы с адресной книгой:</strong>
 
   </li>
-   <h1>Типочки</h1>
+   <h3>Список контактов:</h3>
     [#list contact as c]
         <a href="/${c.id}"
            class="pill primary"

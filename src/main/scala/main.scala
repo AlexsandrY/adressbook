@@ -2,7 +2,7 @@ package org.adressbook
 
 import pro.savant.circumflex._, core._, web._, freemarker._
 import java.util.Date
-import org.adressbook
+
 
 class Main extends Router {
   val log = new Logger("org.adressbook")
@@ -61,7 +61,7 @@ class Main extends Router {
       contact.save()
       sendRedirect("/"+ contact.id())
     }
-    get("/~remove") = ftl("/remove.ftl")
+    get("/~delete") = ftl("/remove.ftl")
     delete("/?") = {
       contact.DELETE_!()
       sendRedirect("/list")
