@@ -64,7 +64,7 @@ class Main extends Router {
     get("/~remove") = ftl("/remove.ftl")
     delete("/?") = {
       contact.DELETE_!()
-      sendRedirect("/list")
+      sendRedirect("/")
     }
 
   }

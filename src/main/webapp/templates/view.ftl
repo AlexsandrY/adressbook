@@ -18,7 +18,7 @@
   </a>
 </div>
 <div class="left-float">
-  <a href="/${contact}/~editing"
+  <a href="/${contact.id}/~editing"
      class="btn primary inverse"
      title="${msg['adr.editing']}">${msg["adr.editing"]}
   </a>
