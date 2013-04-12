@@ -8,6 +8,7 @@ class Main extends Router {
   val log = new Logger("org.adressbook")
 
   'currentDate := new Date
+  'conf := conf
 
 
   get("/") = {
@@ -28,7 +29,7 @@ class Main extends Router {
       c.address:= param("a").trim
       c.dateofBirth:= param("b").trim
       c.save()
-      sendRedirect("/" + c.id())
+      sendRedirect("/" + c.id() + "/list.of.choice")
     } catch {
       case e: ValidationException =>
         notices.addErrors(e.errors)
@@ -48,6 +49,8 @@ class Main extends Router {
     'contact := contact
 
     get("/?") = ftl("/view.ftl")
+    get("/phone") = ftl("/create.phone.ftl")
+    get("/list.of.choice") = ftl("/list.of.choice.ftl")
 
     get("/~editing") = ftl("/editing.ftl")
     post("/?") = {
@@ -59,7 +62,35 @@ class Main extends Router {
       contact.address:= param("a").trim
       contact.dateofBirth:= param("b").trim
       contact.save()
-      sendRedirect("/"+ contact.id())
+      sendRedirect("/" + contact.id())
+    }
+    post("/phone") = {
+      try {
+        val p = new Phone
+        p.phoneType := param("ph").trim
+        p.telephoneNumber := param("sph").trim
+        p.save()
+        sendRedirect("/" + contact.id())
+       }
+      catch {
+        case e: ValidationException =>
+          notices.addErrors(e.errors)
+          sendRedirect("/" + contact.id() + "/phone")
+      }
+    }
+    post("/email") = {
+      try {
+        val m = new Email
+        m.emailType := param("tm").trim
+        m.email := param("tmn").trim
+        m.save()
+        sendRedirect("/" + contact.id())
+      }
+      catch {
+        case e: ValidationException =>
+          notices.addErrors(e.errors)
+          sendRedirect("/" + contact.id() + "/email")
+      }
     }
     get("/~remove") = ftl("/remove.ftl")
     delete("/?") = {
@@ -67,6 +98,7 @@ class Main extends Router {
       sendRedirect("/")
     }
 
+    get("/email") = ftl("/create.email.ftl")
   }
 
 

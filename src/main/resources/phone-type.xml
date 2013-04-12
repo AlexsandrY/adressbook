@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phone-type>
+  <phoneType id="home"/>
+  <phoneType id="work"/>
+  <phoneType id="mobil"/>
+</phone-type>

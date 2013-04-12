@@ -76,7 +76,7 @@
     </div>
 </div>
 <div class="fieldbox">
-    <label for="b">${msg["adr.create.editing.address"]}</label>
+    <label for="b">${msg["adr.create.editing.dateofBirth"]}</label>
     <div class="field">
         <div class="input">
             <input id="b"
