@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<email-type>
-  <emailType id="home"/>
-  <emailType id="work"/>
-</email-type>
+<email-types>
+  <email-type id="home"/>
+  <email-type id="work"/>
+</email-types>

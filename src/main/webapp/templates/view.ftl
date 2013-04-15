@@ -11,6 +11,7 @@
 <p>${contact.company!}</p>
 <p>${contact.address!}</p>
 <p>${contact.dateofBirth!}</p>
+<h4>${phones.telephoneNumber}</h4>
 <div class="left-float">
   <a href="/${contact.id}/~remove"
      class="btn important inverse"

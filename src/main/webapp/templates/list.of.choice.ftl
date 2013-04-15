@@ -12,7 +12,7 @@
 </div>
 
 <div class="submits margin-top centered">
-  <a href="/email"
+  <a href="/${contact.id}/email"
      title="${msg['adr.email']}"
      class="btn primary">${msg['adr.email']}
   </a>

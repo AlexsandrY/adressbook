@@ -5,8 +5,7 @@
 
 <form action="/${contact.id}/email"
       method="post"
-      class="submission" >
-  [#include "create.editing.ftl"/]
+      class="submission">
   <div class="fieldbox">
     <label for="tm">${msg["adr.phone-type"]}</label>
     <div class="field">
@@ -19,6 +18,7 @@
       </div>
     </div>
   </div>
+  <h4>Email-type</h4>
   <div class="input">
     <select id="tmn"
             class="select2"

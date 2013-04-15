@@ -47,9 +47,11 @@ class Main extends Router {
       case e: NumberFormatException => sendError(404)
     }
     'contact := contact
+    'phones := contact.phones.get
 
     get("/?") = ftl("/view.ftl")
     get("/phone") = ftl("/create.phone.ftl")
+    get("/email") = ftl("/create.email.ftl")
     get("/list.of.choice") = ftl("/list.of.choice.ftl")
 
     get("/~editing") = ftl("/editing.ftl")
@@ -71,7 +73,7 @@ class Main extends Router {
         p.telephoneNumber := param("sph").trim
         p.save()
         sendRedirect("/" + contact.id())
-       }
+      }
       catch {
         case e: ValidationException =>
           notices.addErrors(e.errors)

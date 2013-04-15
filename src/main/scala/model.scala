@@ -10,6 +10,7 @@ class Contact
 
   def PRIMARY_KEY: ValueHolder[Long, Contact] = id
   def relation: Relation[Long, Contact] = Contact
+  def phones = inverseMany(Phone.contact)
 
   val id = "id".BIGINT.NOT_NULL.AUTO_INCREMENT
   val firstName = "first_name".HTML.NOT_NULL
@@ -41,6 +42,8 @@ class Phone
   def relation = Phone
 
   val id = "id".BIGINT.NOT_NULL.AUTO_INCREMENT
+  val contact = "contact_id".BIGINT.NOT_NULL
+      .REFERENCES(Contact).ON_DELETE(CASCADE).ON_UPDATE(CASCADE)
   val phoneType = "phoneType".HTML.NOT_NULL
   val telephoneNumber = "telephoneNumber".HTML.NOT_NULL
 }
@@ -61,6 +64,8 @@ class Email
   def relation = Email
 
   val id = "id".BIGINT.NOT_NULL.AUTO_INCREMENT
+  val contact = "contact_id".BIGINT.NOT_NULL
+      .REFERENCES(Contact).ON_DELETE(CASCADE).ON_UPDATE(CASCADE)
   val emailType = "emailType".HTML.NOT_NULL
   val email = "email".HTML.NOT_NULL("")
 }
@@ -69,9 +74,9 @@ object Email extends Email with Table[Long, Email]{
 
 
   validation
-       .unique(_.email)
-       .notEmpty(_.email)
-       .notEmpty(_.emailType)
+      .unique(_.email)
+      .notEmpty(_.email)
+      .notEmpty(_.emailType)
 }
 
 
